@@ -52,10 +52,11 @@
     double median;
     if(n % 2 == 1){
         median = data[n/2];
+        printf("MEDIAN %d", (int)median);
     } else {
         median = (data[n/2 - 1] + data[n/2]) / 2.0;
+        printf("MEDIAN %.2f", median);
     }
-    printf("MEDIAN %.2f", median);
     free(data);
     return 0;
  }
