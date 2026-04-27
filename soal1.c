@@ -16,7 +16,7 @@
                             4. Setelah diurutkan naik:
                                 • jika banyak data ganjil, median adalah elemen tengah
                                 • jika genap, median adalah rata-rata dua elemen tengah, dicetak .50 atau .00 bila perlu
- */
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,7 +34,7 @@
         data = (int*) realloc(data, n * sizeof(int));
         data[n-1] = x;
     }
-    printf("COUNT %d\n", n);
+    printf("COUNT %d ", n);
     for(int i = 0; i < n-1; i++){
         for(int j = 0; j < n-i-1; j++){
             if(data[j] > data[j+1]){
@@ -48,7 +48,6 @@
     for(int i = 0; i < n; i++){
         printf("%d ", data[i]);
     }
-    printf("\n");
     
     double median;
     if(n % 2 == 1){
@@ -56,7 +55,7 @@
     } else {
         median = (data[n/2 - 1] + data[n/2]) / 2.0;
     }
-    printf("MEDIAN %.2f\n", median);
+    printf("MEDIAN %.2f", median);
     free(data);
     return 0;
  }
